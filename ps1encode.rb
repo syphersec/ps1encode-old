@@ -11,7 +11,7 @@
 #    Available output types:
 # => raw (encoded payload only - no powershell run flags/options)
 # => cmd (for use with bat files)
-# => vbs (for use with macro trojan docs) < developed in conjunction with Ryan Reynolds
+# => vba (for use with macro trojan docs) < developed in conjunction with Ryan Reynolds
 # => war (tomcat) < developed in conjuntion with Tony James
 # => exe (executable) requires MinGW - i586-mingw32msvc-gcc [apt-get install mingw32]
 #
@@ -45,7 +45,7 @@ optparse = OptionParser.new do|opts|
                 options[:PAYLOAD] = a
         end
 
-    opts.on('-t', '--ENCODE VALUE', "Output format: raw, cmd, vbs, war, exe") do |t|
+    opts.on('-t', '--ENCODE VALUE', "Output format: raw, cmd, vba, war, exe") do |t|
                 options[:ENCODE] = t
         end
     opts.separator ""
@@ -147,7 +147,7 @@ end
 
 
 ########################VBS_ENCODE###############################
-if $lencode == "vbs"
+if $lencode == "vba"
 
     powershell_encoded = gen_PS_shellcode()
     prepped_powershell_encoded = prep_PS_chunk(powershell_encoded)
