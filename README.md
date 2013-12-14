@@ -5,7 +5,7 @@ by Piotr Marszalik  -  peter.mars[at]outlook.com
 
 05/08/2013
 
-Use to generate and encode a powershell based metasploit payloads. 
+Use to generate and encode powershell based metasploit payloads. 
 
 
     Available output types:
